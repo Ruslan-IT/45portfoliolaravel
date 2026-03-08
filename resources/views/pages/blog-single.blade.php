@@ -65,7 +65,7 @@
 
                                 <div class="post-text">
 
-                                    <div style="white-space: pre-line;">
+                                    <div style="">
                                         {!! $post->content !!}
                                     </div>
 
