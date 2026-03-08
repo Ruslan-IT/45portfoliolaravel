@@ -42,7 +42,7 @@ class WorkForm
                             ->required()
                             ->unique(ignoreRecord: true),
 
-                        Textarea::make('Обзор')
+                        Textarea::make('overview')
                             ->rows(5),
 
                     ]),
