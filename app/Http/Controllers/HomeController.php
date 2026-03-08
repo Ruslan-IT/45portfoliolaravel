@@ -7,6 +7,7 @@ use App\Models\HomePage;
 use App\Models\Product;
 use App\Models\Section;
 use App\Models\SiteSetting;
+use App\Models\Work;
 
 class HomeController
 {
@@ -33,6 +34,8 @@ class HomeController
 
         $homePage = HomePage::first();
 
+        $works = Work::latest()->take(3)->get();
+
         return view('pages.index', compact(
             'title',
             'categoriesRandom',
@@ -40,7 +43,8 @@ class HomeController
             'siteSettings',
             'products',
             'homePage',
-            'sections'
+            'sections',
+            'works'
         ));
     }
 

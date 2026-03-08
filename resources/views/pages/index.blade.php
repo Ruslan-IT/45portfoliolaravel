@@ -28,7 +28,7 @@
 
                    {{-- <h1 class="text-fit wow">Разработка сайтов под ключ</h1>--}}
                     <h2 class="text-fit wow"> Сайты </h2>
-                    <h1 class=""> Разработка сайтов  </h1>
+                    <h1 class=""> Разработка сайтов под ключ </h1>
 
 
                     @include('partials/menu')
@@ -63,7 +63,7 @@
 
                                     <div class="spacer-10"></div>
 
-                                    <a class="w-150px btn-line wow fadeIn" data-wow-delay=".6s" href="about.html">About Me</a>
+                                    <a class="w-150px btn-line wow fadeIn" data-wow-delay=".6s" href="about">Обо мне</a>
 
                                 </div>
 
@@ -219,7 +219,7 @@
 
 
             @php
-                $works = $sections->firstWhere('slug', 'works');
+                $works_section = $sections->firstWhere('slug', 'works');
 
             @endphp
 
@@ -228,12 +228,12 @@
                     <div class="row g-4 gx-5">
                         <div class="col-lg-2">
                             <div class="subtitle ms-3 wow fadeInUp" data-wow-delay=".3s">
-                                {{ $works->title }}
+                                {{ $works_section->title }}
                             </div>
                         </div>
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
                             <h2>
-                                {{ $works->description }}
+                                {{ $works_section->description }}
                             </h2>
                         </div>
                     </div>
@@ -247,71 +247,44 @@
 
 
 
-                        <div class="row g-4 wow fadeInRight" data-wow-delay=".5s">
+                    <div class="row g-4 wow fadeInRight" data-wow-delay=".5s">
 
-                            @foreach($works->items as $key => $item)
+                        @foreach($works as $work)
 
-                                @if($w === 1)
 
-                                <div class="col-lg-4">
-                                    <div class="hover relative overflow-hidden text-light">
-                                        <a href="work-single.html" class="overflow-hidden d-block relative">
-                                            <h2 class="fs-40 abs-centered z-index-1 hover-op-0">{{$item->title}}</h2>
+                            <div class="col-lg-4">
+                                <div class="hover relative overflow-hidden text-light">
 
-                                            <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid hover-scale-1-2" alt="">
+                                    <a href="{{ route('work.show', $work->slug) }}" class="overflow-hidden d-block relative">
 
-                                            <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
-                                                <div class="d-tag-s2">{{$item->description}}</div>
+                                        <h2 class="fs-40 abs-centered z-index-1 hover-op-0">
+                                            {{ $work->title }}
+                                        </h2>
 
-                                                @if($item->meta)
-                                                    @foreach($item->meta as $field)
+                                        <img src="{{ asset('storage/'.$work->image) }}"
+                                             class="img-fluid hover-scale-1-2"
+                                             alt="{{ $work->title }}">
 
-                                                        <div class="fw-bold">
-                                                            {{ $field['value'] }}
-                                                        </div>
+                                        <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
 
-                                                    @endforeach
-
-                                                @endif
-
+                                            <div class="d-tag-s2">
+                                                {{ $work->category }}
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
 
-                                @else
-
-                                <div class="col-lg-4">
-                                    <div class="hover relative overflow-hidden text-light">
-                                        <a href="work-single.html" class="overflow-hidden d-block relative">
-                                            <h2 class="fs-40 abs-centered z-index-1 hover-op-0">{{$item->title}}</h2>
-
-                                            <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid hover-scale-1-2" alt="">
-
-                                            <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
-                                                <div class="d-tag-s2">{{$item->description}}</div>
-                                                @if($item->meta)
-                                                    @foreach($item->meta as $field)
-
-                                                        <div class="fw-bold">
-                                                            {{ $field['value'] }}
-                                                        </div>
-
-                                                    @endforeach
-
-                                                @endif
+                                            <div class="fw-bold">
+                                                {{ $work->year }}
                                             </div>
-                                        </a>
-                                    </div>
+
+                                        </div>
+
+                                    </a>
+
                                 </div>
+                            </div>
 
-                                @endif
+                        @endforeach
 
-                                @php $w++; @endphp
-
-                            @endforeach
-
-                        </div>
+                    </div>
 
 
 
