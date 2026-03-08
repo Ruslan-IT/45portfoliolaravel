@@ -26,7 +26,10 @@
 
                 <div class="text-fit-wrapper">
 
-                    <h1 class="text-fit wow">Сайтов</h1>
+                   {{-- <h1 class="text-fit wow">Разработка сайтов под ключ</h1>--}}
+                    <h2 class="text-fit wow"> Сайты </h2>
+                    <h1 class=""> Разработка сайтов  </h1>
+
 
                     @include('partials/menu')
 
@@ -50,7 +53,7 @@
                                 <div class="col-lg-6">
                                     <div class="relative">
                                         <div class="subtitle wow fadeInUp" data-wow-delay=".3s"> {{ $availableWork->title }}</div>
-                                        <h1 class="lh-1 wow fadeInUp" data-wow-delay=".4s"> {{ $item->title }}</h1>
+                                        <h2 class="lh-1 wow fadeInUp" data-wow-delay=".4s"> {{ $item->title }}</h2>
                                     </div>
                                     <p class="lead wow fadeInUp" data-wow-delay=".5s">
 
