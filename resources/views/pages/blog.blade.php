@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
-@section('seo_title', $work->seo_title)
-@section('seo_description', $work->seo_description)
-@section('seo_keywords', $work->seo_keywords)
+
+@section('seo_title', 'Мой блог')
+@section('seo_description', 'Мой блог: разработка сайтов, веб-сервисов и интернет-магазинов.')
+@section('seo_keywords', 'Мой блог разработчика, разработка сайтов, веб проекты')
+
+
+
 @section('content')
 
 
