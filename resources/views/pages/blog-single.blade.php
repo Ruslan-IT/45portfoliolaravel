@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('seo_title', $post->seo_title)
+@section('seo_description', $post->seo_description)
+@section('seo_keywords', $post->seo_keywords)
 
 @section('content')
 
@@ -32,7 +34,7 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
-                    <h1 class="text-fit wow">My Blog</h1>
+                    <h1 class="text-fit wow">Блог</h1>
                     @include('partials/menu')
                 </div>
             </section>
