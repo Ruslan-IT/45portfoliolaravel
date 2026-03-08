@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('seo_title', 'Мои работы')
+@section('seo_description', 'Портфолио реализованных проектов: разработка сайтов, веб-сервисов и интернет-магазинов.')
+@section('seo_keywords', 'портфолио разработчика, разработка сайтов, веб проекты')
 
 @section('content')
 

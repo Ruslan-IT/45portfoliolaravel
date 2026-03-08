@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
-
+@section('seo_title', $work->seo_title)
+@section('seo_description', $work->seo_description)
+@section('seo_keywords', $work->seo_keywords)
 @section('content')
 
 
