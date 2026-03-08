@@ -44,14 +44,14 @@
                                 <div class="col-lg-12">
                                     <div class="row g-4 gx-5 wow fadeInUp" data-wow-delay=".5s">
                                         <div class="col-sm-6">
-                                            <h4>Overview</h4>
+                                            <h4>Обзор</h4>
                                             <p class="no-bottom">
                                                 {{ $work->overview }}
                                             </p>
                                         </div>
 
                                         <div class="col-sm-6">
-                                            <h4>Objectives</h4>
+                                            <h4>Цели</h4>
                                             <ul class="ul-style-2">
 
                                                 @foreach($work->objectives as $item)

@@ -42,7 +42,7 @@ class WorkForm
                             ->required()
                             ->unique(ignoreRecord: true),
 
-                        Textarea::make('overview')
+                        Textarea::make('Обзор')
                             ->rows(5),
 
                     ]),
@@ -61,7 +61,7 @@ class WorkForm
                     ])
                     ->columns(4),
 
-                Section::make('Objectives')
+                Section::make('Цели')
                     ->schema([
 
                         Repeater::make('objectives')
