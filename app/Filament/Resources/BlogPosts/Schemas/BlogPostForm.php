@@ -42,16 +42,7 @@ class BlogPostForm
 
                     ])->columns(2),
 
-                Section::make('Content')
-                    ->schema([
 
-                        Textarea::make('excerpt')
-                            ->rows(3),
-
-                        RichEditor::make('content')
-                            ->columnSpanFull(),
-
-                    ]),
 
                 Section::make('SEO')
                     ->schema([
@@ -62,7 +53,28 @@ class BlogPostForm
 
                         TextInput::make('seo_keywords'),
 
-                    ])
+                    ]),
+
+                 Section::make('Content')
+                     ->schema([
+
+                         RichEditor::make('content')
+                             ->extraAttributes([
+                                 'style' => 'min-height: 500px;',
+                             ]),
+
+
+                         Textarea::make('excerpt')
+                             ->rows(5),
+
+
+
+
+                     ])
+                     ->columns(1)
+                     ->columnSpanFull()
+
+
 
             ]);
     }
