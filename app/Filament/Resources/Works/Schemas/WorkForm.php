@@ -7,7 +7,11 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+
+use Illuminate\Support\Str;
+
 
 class WorkForm
 {
@@ -28,7 +32,11 @@ class WorkForm
                             ->columnSpanFull(),
 
                         TextInput::make('title')
-                            ->required(),
+                            ->required()
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(function (Set $set, $state) {
+                                $set('slug', Str::slug($state));
+                            }),
 
                         TextInput::make('slug')
                             ->required()

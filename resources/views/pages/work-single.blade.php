@@ -23,7 +23,8 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
-                    <h1 class="text-fit wow">{{$work->title}}</h1>
+                    <h2 class="text-fit wow">{{$work->title}}</h2>
+                    <h1 class=""> {{$work->title}} </h1>
 
                     @include('partials/menu')
 

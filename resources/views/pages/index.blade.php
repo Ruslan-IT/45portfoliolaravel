@@ -296,12 +296,12 @@
                 <div class="wow fadeInRight d-flex">
                     <div class="de-marquee-list wow">
                         <div class="d-item">
-                            <span class="d-item-txt">CUSTOM WEBSITE DESIGN</span>
-                            <span class="d-item-txt">E-COMMERCE WEBSITE</span>
-                            <span class="d-item-txt">LANDING PAGE DESIGN</span>
-                            <span class="d-item-txt">FRONT-END DEVELOPMENT</span>
-                            <span class="d-item-txt">BACK-END DEVELOPMENT</span>
-                            <span class="d-item-txt">CONTENT MANAGEMENT SYSTEM</span>
+                            <span class="d-item-txt">Разработка сайтов под ключ</span>
+                            <span class="d-item-txt">Доработка сайта</span>
+                            <span class="d-item-txt">Разработка интернет магазина</span>
+                            <span class="d-item-txt">Разработка сайта каталога</span>
+                            <span class="d-item-txt">Разработка лендинга</span>
+                            <span class="d-item-txt">Продвижение сайта</span>
                         </div>
                     </div>
                 </div>
