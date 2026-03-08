@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use App\Models\Category;
 use App\Models\HomePage;
 use App\Models\Product;
@@ -36,6 +37,11 @@ class HomeController
 
         $works = Work::latest()->take(3)->get();
 
+        $posts = BlogPost::where('is_published', true)
+            ->latest('published_at')
+            ->take(2)
+            ->get();
+
         return view('pages.index', compact(
             'title',
             'categoriesRandom',
@@ -44,7 +50,8 @@ class HomeController
             'products',
             'homePage',
             'sections',
-            'works'
+            'works',
+            'posts'
         ));
     }
 

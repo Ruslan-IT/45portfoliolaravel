@@ -316,125 +316,49 @@
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
                             <div class="row g-4">
 
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/1.webp" class="lazy">
-                                                </div>
-                                            </div>
+                                @foreach($posts as $post)
 
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
+                                    <div class="col-lg-6">
+                                        <div class="relative">
+                                            <div class="row g-4 align-items-center">
+
+                                                <div class="col-sm-3">
+                                                    <div class="post-image">
+                                                        <img src="{{ asset('storage/'.$post->image) }}"
+                                                             alt="{{ $post->title }}"
+                                                             class="lazy">
+                                                    </div>
                                                 </div>
-                                                <h4><a href="blog-single.html">Mastering Modern Web Design: Trends and Techniques for 2024</a></h4>
+
+                                                <div class="col-sm-9">
+
+                                                    <div class="mb-2">
+
+                                                        <div class="d-inline fs-14 fw-bold me-3">
+                                                            <i class="icofont-tag text-white me-2"></i>
+                                                            {{ $post->category }}
+                                                        </div>
+
+                                                        <div class="d-inline fs-14 fw-600">
+                                                            <i class="icofont-ui-calendar text-white me-2"></i>
+                                                            {{ \Carbon\Carbon::parse($post->published_at)->format('d M Y') }}
+                                                        </div>
+
+                                                    </div>
+
+                                                    <h4>
+                                                        <a href="{{ route('blog.show', $post->slug) }}">
+                                                            {{ $post->title }}
+                                                        </a>
+                                                    </h4>
+
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/2.webp" class="lazy">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
-                                                </div>
-                                                <h4><a href="blog-single.html">The Art of User Experience: Designing Websites That Delight</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/3.webp" class="lazy">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
-                                                </div>
-                                                <h4><a href="blog-single.html">Responsive Design Best Practices: Making Your Website Mobile-Friendly</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/4.webp" class="lazy">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
-                                                </div>
-                                                <h4><a href="blog-single.html">Typography in Web Design: Choosing Fonts That Make an Impact</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/5.webp" class="lazy">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
-                                                </div>
-                                                <h4><a href="blog-single.html">Web Design Mistakes to Avoid: Common Pitfalls and How to Fix Them</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="relative">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/6.webp" class="lazy">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-9">
-                                                <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
-                                                </div>
-                                                <h4><a href="blog-single.html">Creating Accessible Websites: Why Inclusive Design Matters</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
 
                             </div>
                         </div>
