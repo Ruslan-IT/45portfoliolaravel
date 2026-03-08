@@ -66,7 +66,7 @@
                                 <div class="post-text">
 
                                     <div style="white-space: pre-line;">
-                                        {{ $post->excerpt }}
+                                        {{ $post->content }}
                                     </div>
 
                                 </div>
