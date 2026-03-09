@@ -39,7 +39,7 @@ class AboutForm
                     ->columns(2),
 
                 Repeater::make('experiences')
-                    ->label('Experiences')
+                    ->label('Опыт')
                     ->schema([
                         TextInput::make('period')->label('Years'),
                         TextInput::make('position')->label('Position'),
@@ -48,7 +48,7 @@ class AboutForm
                     ->columns(3),
 
                 Repeater::make('education')
-                    ->label('Education')
+                    ->label('Образование')
                     ->schema([
                         TextInput::make('year')->label('Year'),
                         TextInput::make('degree')->label('Degree'),

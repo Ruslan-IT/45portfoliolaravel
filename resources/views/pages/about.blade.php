@@ -54,7 +54,7 @@
 
                                     <div class="col-sm-6">
                                         <p>
-                                            description2
+
                                         </p>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                     <div class="container">
                         <div class="row g-4">
                             <div class="col-lg-2">
-                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Experiences</div>
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Опыт</div>
                             </div>
                             <div class="col-lg-10">
                                 <div class="row g-4">
@@ -187,7 +187,7 @@
                     <div class="container">
                         <div class="row g-4">
                             <div class="col-lg-2">
-                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Education</div>
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Образование</div>
                             </div>
                             <div class="col-lg-10">
                                 @php
