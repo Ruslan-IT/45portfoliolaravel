@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /admin_1
+Disallow: /login
+Disallow: /register
+Disallow: /storage
+
+Sitemap: https://web-ruslan.ru/sitemap.xml
