@@ -84,26 +84,29 @@
                     <div class="row g-4">
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".0s">
-                                <h3 class="fs-48 mb-1"><span class="timer" data-to="8240" data-speed="3000">0</span></h3>
-                                <div class="fs-15">Hours of Works</div>
+                                <h3 class="fs-48 mb-1"><span class="timer" data-to="37440" data-speed="3000">0</span></h3>
+                                <div class="fs-15">Часов разработки</div>
                             </div>
                         </div>
+
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".2s">
-                                <h3 class="fs-48 mb-1"><span class="timer" data-to="315" data-speed="3000">0</span></h3>
-                                <div class="fs-15">Projects Done</div>
+                                <h3 class="fs-48 mb-1"><span class="timer" data-to="312" data-speed="3000">0</span></h3>
+                                <div class="fs-15">Реализованных проектов</div>
                             </div>
                         </div>
+
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".4s">
-                                <h3 class="fs-48 mb-1"><span class="timer" data-to="250" data-speed="3000">0</span></h3>
-                                <div class="fs-15">Satisfied Customers</div>
+                                <h3 class="fs-48 mb-1"><span class="timer" data-to="278" data-speed="3000">0</span></h3>
+                                <div class="fs-15">Довольных клиентов</div>
                             </div>
                         </div>
+
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".6s">
-                                <h3 class="fs-48 mb-1"><span class="timer" data-to="32" data-speed="3000">0</span></h3>
-                                <div class="fs-15">Awards Winning</div>
+                                <h3 class="fs-48 mb-1"><span class="timer" data-to="8" data-speed="3000">0</span></h3>
+                                <div class="fs-15">Года опыта</div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +117,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-2">
-                            <div class="subtitle wow fadeInUp" data-wow-delay=".3s">About Me</div>
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Обо мне</div>
                         </div>
                         <div class="col-lg-10">
                             @foreach($sections as $section)
@@ -311,7 +314,7 @@
                 <div class="container">
                     <div class="row g-5">
                         <div class="col-lg-2">
-                            <div class="subtitle ms-3 wow fadeInUp" data-wow-delay=".3s">From the Blog</div>
+                            <div class="subtitle ms-3 wow fadeInUp" data-wow-delay=".3s">Последние статьи</div>
                         </div>
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
                             <div class="row g-4">
@@ -370,32 +373,7 @@
         <!-- content close -->
 
         <!-- footer begin -->
-        <footer>
-            <div class="container-fluid">
-                <div class="px-2">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-6">
-                            <div class="d-menu-1 wow" data-wow-delay=".3s">
-                                <ul>
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="#">Instagram</a></li>
-                                </ul>
-
-                                <p class="no-bottom">All Right Reserved<br>Template By Designesia</p>
-
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 text-lg-end">
-                            <a href="contact.html">
-                                <h2 class="fs-84 fw-800 pe-3 shuffle wow fadeInLeft" data-wow-delay=".3s">Let's Talk</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('partials/footer')
         <!-- footer close -->
     </div>
 
