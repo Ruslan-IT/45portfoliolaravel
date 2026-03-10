@@ -9,7 +9,11 @@
 
 @section('content')
 
-
+    <style>
+        ol, ul {
+            padding-left: 2rem;
+        }
+    </style>
 
     <div id="wrapper">
         <div class="float-text show-on-scroll">
