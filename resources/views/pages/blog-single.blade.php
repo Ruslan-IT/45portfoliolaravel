@@ -18,6 +18,11 @@
         ol, ul {
             padding-left: 2rem!important;
         }
+
+        .blog-read .post-text {
+            padding: 0;
+            font-size: 20px;
+        }
     </style>
 
     <div id="wrapper">
