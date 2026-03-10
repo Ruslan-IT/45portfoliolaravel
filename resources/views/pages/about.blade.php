@@ -224,7 +224,7 @@
                                                         <img src="{{ asset('storage/'.$t['image']) }}" class="circle" alt="">
                                                         <div>{{ $t['author'] }}<span>{{ $t['position'] }}</span></div>
                                                     </div>
-                                                    <p>{{ $t['text'] }}</p>
+                                                    <p>{{ Str::words($t['text'], 30, '...') }}</p>
                                                     <a href="https://freelance.ru/reviews/ruslanfazliev/">Посмотреть</a>
                                                 </blockquote>
                                             </div>
