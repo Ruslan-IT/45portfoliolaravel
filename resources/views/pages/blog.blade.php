@@ -63,7 +63,7 @@
 
                                 @endforeach
                                 <!-- pagination begin -->
-                                <div class="col-lg-12 pt-3 text-center">
+                               {{-- <div class="col-lg-12 pt-3 text-center">
                                     <div class="d-inline-block">
                                         <nav aria-label="Page navigation example">
                                             <ul class="pagination">
@@ -83,7 +83,7 @@
                                             </ul>
                                         </nav>
                                     </div>
-                                </div>
+                                </div>--}}
                                 <!-- pagination end -->
 
                             </div>
