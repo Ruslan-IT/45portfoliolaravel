@@ -14,6 +14,10 @@
         .text-format {
             white-space: pre-line;
         }
+
+        ol, ul {
+            padding-left: 2rem!important;
+        }
     </style>
 
     <div id="wrapper">
