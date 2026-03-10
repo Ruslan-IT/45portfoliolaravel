@@ -11,7 +11,7 @@
 
     <style>
         ol, ul {
-            padding-left: 2rem;
+            padding-left: 2rem!important;
         }
     </style>
 
