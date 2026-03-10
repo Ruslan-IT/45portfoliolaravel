@@ -28,7 +28,7 @@
                 <section class="no-top">
 
                     <div class="text-fit-wrapper">
-                        <h1 class="text-fit wow">About Me</h1>
+                        <h2 class="text-fit wow">About Me</h2>
                         @include('partials/menu')
                     </div>
                 </section>
@@ -40,11 +40,11 @@
                             </div>
                             <div class="col-lg-10">
 
-                                <h2 class="lh-1  wow fadeInUp" data-wow-delay=".4s">
+                                <h1 class="lh-1  wow fadeInUp" data-wow-delay=".4s">
 
                                     {{ $about->title }}
 
-                                </h2>
+                                </h1>
                                 <div class="row g-4 wow fadeInUp" data-wow-delay=".5s">
                                     <div class="col-sm-6">
                                         <p>
@@ -224,8 +224,8 @@
                                                         <img src="{{ asset('storage/'.$t['image']) }}" class="circle" alt="">
                                                         <div>{{ $t['author'] }}<span>{{ $t['position'] }}</span></div>
                                                     </div>
-                                                    <p>{{ Str::words($t['text'], 30, '...') }}</p>
-                                                    <a href="https://freelance.ru/reviews/ruslanfazliev/">Посмотреть</a>
+                                                    <p>{{ Str::words($t['text'], 20, '...') }}</p>
+                                                    <a href="https://freelance.ru/reviews/ruslanfazliev/">Все отзывы</a>
                                                 </blockquote>
                                             </div>
                                         </div>
@@ -242,25 +242,24 @@
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".0s">
                                     <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->hours_of_works }}" data-speed="3000">0</span></h3>
-                                    <div class="fs-15">Hours of Works</div>
+                                    <div class="fs-15">Часов разработки</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".2s">
                                     <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->projects_done }}" data-speed="3000">0</span></h3>
-                                    <div class="fs-15">Projects Done2</div>
+                                    <div class="fs-15">Реализованных проектов</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".4s">
                                     <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->satisfied_customers }}" data-speed="3000">0</span></h3>
-                                    <div class="fs-15">Satisfied Customers</div>
-                                </div>
+                                    <div class="fs-15">Довольных клиентов
                             </div>
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".6s">
                                     <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->awards_winning }}" data-speed="3000">0</span></h3>
-                                    <div class="fs-15">Awards Winning</div>
+                                    <div class="fs-15">Года опыта</div>
                                 </div>
                             </div>
                         </div>
