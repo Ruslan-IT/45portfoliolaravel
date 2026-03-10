@@ -183,35 +183,30 @@
                     </div>
                 </section>
 
-                <section class="no-top">
-                    <div class="container">
-                        <div class="row g-4">
-                            <div class="col-lg-2">
-                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Образование</div>
-                            </div>
-                            <div class="col-lg-10">
-                                @php
-                                    $k = 4;
-                                @endphp
-                                @foreach($about->education as $edu)
-
-                                    <div class="row g-4">
-                                        <div class="col-md-4 wow fadeInRight" data-wow-delay=".{{ $k  }}}s">
-                                            <h6>{{ $edu['year'] }}</h6>
-                                            <h3>{{ $edu['degree'] }}</h3>
-                                            <p>{{ $edu['school'] }}</p>
+                @if(!empty($about->education) && count($about->education) > 0)
+                    <section class="no-top">
+                        <div class="container">
+                            <div class="row g-4">
+                                <div class="col-lg-2">
+                                    <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Образование</div>
+                                </div>
+                                <div class="col-lg-10">
+                                    @php $k = 4; @endphp
+                                    @foreach($about->education as $edu)
+                                        <div class="row g-4">
+                                            <div class="col-md-4 wow fadeInRight" data-wow-delay=".{{ $k }}s">
+                                                <h6>{{ $edu['year'] }}</h6>
+                                                <h3>{{ $edu['degree'] }}</h3>
+                                                <p>{{ $edu['school'] }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    @php
-                                        $k++;
-                                    @endphp
-
-                                @endforeach
+                                        @php $k++; @endphp
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                @endif
 
                 <section class="no-top">
                     <div class="container">
