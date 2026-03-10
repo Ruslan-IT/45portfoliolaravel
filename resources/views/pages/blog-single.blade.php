@@ -43,7 +43,7 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
-                    <h1 class="text-fit wow">Блог</h1>
+                    <h2 class="text-fit wow">Блог</h2>
                     @include('partials/menu')
                 </div>
             </section>
@@ -56,7 +56,7 @@
                                 <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
                                 <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>{{ $post->published_at }}</div>
                             </div>
-                            <h2>{{ $post->title }}</h2>
+                            <h1>{{ $post->title }}</h1>
                         </div>
 
                         <div class="col-lg-6">
