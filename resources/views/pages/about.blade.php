@@ -225,7 +225,7 @@
                                                         <div>{{ $t['author'] }}<span>{{ $t['position'] }}</span></div>
                                                     </div>
                                                     <p>{{ $t['text'] }}</p>
-                                                    <a href="">Посмотреть</a>
+                                                    <a href="https://freelance.ru/reviews/ruslanfazliev/">Посмотреть</a>
                                                 </blockquote>
                                             </div>
                                         </div>
