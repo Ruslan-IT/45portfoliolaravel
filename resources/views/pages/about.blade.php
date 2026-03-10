@@ -212,7 +212,7 @@
                     <div class="container">
                         <div class="row g-4">
                             <div class="col-lg-2">
-                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">What They Says</div>
+                                <div class="subtitle wow fadeInUp" data-wow-delay=".3s">отзывы</div>
                             </div>
                             <div class="col-lg-10">
                                 <div class="owl-3-cols-dots owl-carousel owl-theme wow fadeInUp" data-wow-delay=".4s">
@@ -225,6 +225,7 @@
                                                         <div>{{ $t['author'] }}<span>{{ $t['position'] }}</span></div>
                                                     </div>
                                                     <p>{{ $t['text'] }}</p>
+                                                    <a href="">Посмотреть</a>
                                                 </blockquote>
                                             </div>
                                         </div>
