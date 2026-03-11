@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('seo_title', 'Мои работы')
-@section('seo_description', 'Портфолио реализованных проектов: разработка сайтов, веб-сервисов и интернет-магазинов.')
-@section('seo_keywords', 'портфолио разработчика, разработка сайтов, веб проекты')
+@section('seo_title', 'Портфолио: примеры разработки сайтов и интернет-магазинов - web-ruslan')
+@section('seo_description', 'Портфолио реализованных проектов: разработка сайтов, веб-сервисов и интернет-магазинов - web-ruslan')
+@section('seo_keywords', 'пример разработки сайта, разработка сайтов проекты, разработка сайта компании, разработка интернет магазина примеры, создание сайтов примеры работ - web-ruslan')
 
 @section('content')
 
@@ -25,13 +25,14 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
-                    <h1 class="text-fit wow">Мои работы</h1>
+                    <h2 class="">Кейсы</h2>
                     @include('partials/menu')
                 </div>
             </section>
 
             <section class="no-top">
                 <div class="container">
+                    <h1 class="">Мои работы — примеры разработанных сайтов</h1>
                     <div class="row g-4 wow fadeInUp" data-wow-delay=".3s">
 
                         @foreach($works as $work)
