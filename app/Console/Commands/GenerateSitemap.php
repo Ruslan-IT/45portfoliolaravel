@@ -41,7 +41,7 @@ class GenerateSitemap extends Command
             ->add(Url::create('/contact'));
 
         foreach (Work::all() as $work) {
-            $sitemap->add("/works/{$work->slug}");
+            $sitemap->add("/work/{$work->slug}");
         }
 
         foreach (BlogPost::where('is_published', true)->get() as $post) {
