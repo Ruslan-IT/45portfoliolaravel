@@ -69,3 +69,11 @@ Route::redirect('/portfolio', '/works', 301);
 Route::redirect('/news', '/blog', 301);
 Route::redirect('/articles', '/blog', 301);
 Route::redirect('/pages/{any}', '/', 301)->where('any', '.*');
+
+Route::get('/video/v.webm', function() {
+    return redirect('/', 301);
+});
+
+Route::get('/video/networkstars.mp4', function() {
+    return redirect('/', 301);
+});
