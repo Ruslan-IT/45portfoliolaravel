@@ -58,7 +58,7 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])
     ->name('contact.send');
 
-
+/************************************************************************************************************/
 
 Route::get('/works/{slug}', function ($slug) {
     return redirect('/work/' . $slug, 301);
@@ -75,5 +75,9 @@ Route::get('/video/v.webm', function() {
 });
 
 Route::get('/video/networkstars.mp4', function() {
+    return redirect('/', 301);
+});
+
+Route::get('/blog/blog-single.html', function() {
     return redirect('/', 301);
 });
