@@ -30,12 +30,6 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])
 Route::get('/work/{slug}', [WorkController::class, 'show'])->name('work.show');
 Route::get('/works', [WorkController::class, 'index'])->name('works.index');
 
-Route::get('/works/{slug}', function ($slug) {
-    return redirect('/work/' . $slug, 301);
-});
-
-
-
 
 
 Route::get('/category', [CategoryController::class, 'index'])
@@ -64,3 +58,14 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])
     ->name('contact.send');
 
+
+
+Route::get('/works/{slug}', function ($slug) {
+    return redirect('/work/' . $slug, 301);
+});
+
+Route::redirect('/contacts', '/contact', 301);
+Route::redirect('/portfolio', '/works', 301);
+Route::redirect('/news', '/blog', 301);
+Route::redirect('/articles', '/blog', 301);
+Route::redirect('/pages/{any}', '/', 301)->where('any', '.*');
