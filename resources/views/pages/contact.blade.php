@@ -49,9 +49,10 @@
                                 </div>
                             @endif
 
-                            <p>Whether you have a question, a suggestion, or just want to say hello,
-                                this is the place to do it. Please fill out the form below with your details and message,
-                                and we'll get back to you as soon as possible.
+                            <p>
+                                Если у вас есть вопрос, предложение или вы хотите обсудить разработку сайта — напишите мне.
+                                Заполните форму ниже, укажите свои контактные данные и опишите задачу.
+                                Я свяжусь с вами в ближайшее время.
                             </p>
 
 
