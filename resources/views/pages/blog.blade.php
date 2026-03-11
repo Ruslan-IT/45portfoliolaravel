@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 
-@section('seo_title', 'Мой блог')
-@section('seo_description', 'Мой блог: разработка сайтов, веб-сервисов и интернет-магазинов.')
-@section('seo_keywords', 'Мой блог разработчика, разработка сайтов, веб проекты')
+@section('seo_title', 'Блог о разработке сайтов, интернет-магазинов и SEO - web-ruslan')
+@section('seo_description', 'Полезные статьи о разработке сайтов, интернет-магазинов, SEO-продвижении и создании сайтов для бизнеса - web-ruslan')
+@section('seo_keywords', 'разработка сайтов статьи, блог разработка сайтов, этапы разработки сайта, основы разработки сайта, разработка интернет сайтов - web-ruslan ')
 
 
 
@@ -33,13 +33,15 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
-                    <h1 class="text-fit wow">My Blog</h1>
+                    <h2 class="text-fit wow">Блог</h2>
                     @include('partials/menu')
+
                 </div>
             </section>
 
             <section class="no-top">
                 <div class="container">
+                    <h1> Блог о веб-разработке и интернет-маркетинге </h1>
                     <div class="row g-5">
                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                             <div class="row g-4">
