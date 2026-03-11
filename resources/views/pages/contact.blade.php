@@ -27,13 +27,14 @@
 
                 <div class="text-fit-wrapper">
                     <h2 class="text-fit wow">Контакты</h2>
-                    <h1 class="">Контакты – напишите мне</h1>
+
                     @include('partials/menu')
                 </div>
             </section>
 
             <section class="no-top">
                 <div class="container">
+                    <h1 class="">Контакты – напишите мне</h1>
                     <div class="row g-4 gx-5">
                         <div class="col-lg-8 offset-lg-2 wow fadeInUp" data-wow-delay=".3s">
 
