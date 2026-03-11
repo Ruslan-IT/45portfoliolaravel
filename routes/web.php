@@ -30,7 +30,9 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])
 Route::get('/work/{slug}', [WorkController::class, 'show'])->name('work.show');
 Route::get('/works', [WorkController::class, 'index'])->name('works.index');
 
-
+Route::get('/works/{slug}', function ($slug) {
+    return redirect('/work/' . $slug, 301);
+});
 
 
 
