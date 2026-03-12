@@ -17,10 +17,11 @@ use Filament\Tables\Table;
 class ContactRequestResource extends Resource
 {
     protected static ?string $model = ContactRequest::class;
-    protected static ?int $navigationSort = 3;
+
 
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Envelope;
+    protected static string|null|\UnitEnum $navigationGroup = 'Сайт';
 
     public static function form(Schema $schema): Schema
     {

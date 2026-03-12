@@ -18,6 +18,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Navigation\NavigationGroup;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -51,6 +52,18 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+            ])
+            ->navigationGroups([
+                
+                'Главная',
+                'Портфолио',
+                'Блог',
+                'Профиль',
+                'Обо мне',
+                'Услуги',
+                'Контакт',
+                'Сайт',
+                'Каталог',
             ])
             ->authMiddleware([
                 Authenticate::class,

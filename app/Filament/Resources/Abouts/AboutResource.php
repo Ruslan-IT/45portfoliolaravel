@@ -18,7 +18,9 @@ class AboutResource extends Resource
 {
     protected static ?string $model = About::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::User;
+    protected static string|null|\UnitEnum $navigationGroup = 'Обо мне';
 
     public static function form(Schema $schema): Schema
     {

@@ -20,7 +20,7 @@ class SiteSettingsResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Cog6Tooth;
 
-    protected static ?int $navigationSort = 4;
+    protected static string|null|\UnitEnum $navigationGroup = 'Сайт';
 
 
     public static function form(Schema $schema): Schema

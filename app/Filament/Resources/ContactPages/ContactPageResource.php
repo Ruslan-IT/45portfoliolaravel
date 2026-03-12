@@ -18,9 +18,10 @@ class ContactPageResource extends Resource
 {
     protected static ?string $model = ContactPage::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Envelope;
+    protected static string|null|\UnitEnum $navigationGroup = 'Контакт';
 
-    protected static ?string $recordTitleAttribute = '3';
+
 
     public static function form(Schema $schema): Schema
     {

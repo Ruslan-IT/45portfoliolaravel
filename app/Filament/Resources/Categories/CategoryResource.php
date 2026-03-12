@@ -17,8 +17,10 @@ use Filament\Tables\Table;
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
+    protected static string|null|\UnitEnum $navigationGroup = 'Каталог';
 
-    protected static ?int $navigationSort = 1;
+
+    protected static ?int $navigationSort = 12;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Squares2x2;
 

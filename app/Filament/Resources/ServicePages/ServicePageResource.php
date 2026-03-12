@@ -18,7 +18,9 @@ class ServicePageResource extends Resource
 {
     protected static ?string $model = ServicePage::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|null|\UnitEnum $navigationGroup = 'Услуги';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Cog6Tooth;
+
 
     public static function form(Schema $schema): Schema
     {
