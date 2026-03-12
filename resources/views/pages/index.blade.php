@@ -6,6 +6,12 @@
 
 @section('content')
 
+    <style>
+        .img-fluid {
+            min-height: 350px;
+        }
+    </style>
+
 
     <div id="wrapper">
         <div class="float-text show-on-scroll">
