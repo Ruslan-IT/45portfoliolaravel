@@ -81,3 +81,11 @@ Route::get('/video/networkstars.mp4', function() {
 Route::get('/blog/blog-single.html', function() {
     return redirect('/', 301);
 });
+
+Route::get('/images/main.jpg', function() {
+    return redirect('/', 301);
+});
+
+Route::get('/video/v.mp4', function() {
+    return redirect('/', 301);
+});
