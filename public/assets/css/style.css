@@ -1850,10 +1850,16 @@ header.header-light .h-phone span{
 .post-image{
   overflow: hidden;
   margin-bottom: 20px;
+
+
 }
 .post-image img {
   width: 100%;
   margin-bottom: 0px;
+
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 .post-image .d-tagline{
   position: absolute;
