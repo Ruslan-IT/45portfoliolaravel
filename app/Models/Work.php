@@ -36,4 +36,9 @@ class Work extends Model
         'gallery' => 'array',
 
     ];
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }

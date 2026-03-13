@@ -19,44 +19,56 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
-Route::get('/blog', [BlogController::class, 'index'])
-    ->name('blog.index');
-
-Route::get('/blog/{slug}', [BlogController::class, 'show'])
-    ->name('blog.show');
+/*
+ * обычные страницы
+ *
+ * */
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 
 Route::get('/work/{slug}', [WorkController::class, 'show'])->name('work.show');
 Route::get('/works', [WorkController::class, 'index'])->name('works.index');
 
 
+/*
+ * city страницы
+ *
+ * */
+Route::get('/city/{city:slug}', [PageController::class, 'city'])->name('city.show');
 
-Route::get('/category', [CategoryController::class, 'index'])
-    ->name('category.index');
+Route::get('/city/{city:slug}/blog', [BlogController::class, 'city'])->name('city.blog');
 
-Route::get('/category/{slug}', [CategoryController::class, 'show'])
-    ->name('category.show');
+Route::get('/city/{city:slug}/works', [WorkController::class, 'city'])->name('city.works');
 
 
-Route::get('/product/{slug}', [ProductController::class, 'show'])
-    ->name('product.show');
+/**********************/
+/**********************/
+/**********************/
 
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
 
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'send'])
+    ->name('contact.send');
 
 
+
+
+/*Route::get('/product/{slug}', [ProductController::class, 'show'])
+    ->name('product.show');
 
 
 Route::post('/subscribe', [NewsletterController::class, 'store'])
     ->name('newsletter.subscribe');
 
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/category', [CategoryController::class, 'index'])
+    ->name('category.index');
 
-Route::post('/contact', [ContactController::class, 'send'])
-    ->name('contact.send');
+Route::get('/category/{slug}', [CategoryController::class, 'show'])
+    ->name('category.show');*/
 
 /************************************************************************************************************/
 

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Works\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Section;
@@ -114,7 +115,12 @@ class WorkForm
 
                         TextInput::make('seo_keywords'),
 
-                    ])
+                    ]),
+
+                Select::make('city_id')
+                    ->relationship('city','name')
+                    ->searchable()
+                    ->preload()
 
             ]);
     }

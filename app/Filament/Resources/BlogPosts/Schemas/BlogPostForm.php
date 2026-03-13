@@ -5,6 +5,7 @@ namespace App\Filament\Resources\BlogPosts\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -54,6 +55,11 @@ class BlogPostForm
                         TextInput::make('seo_keywords'),
 
                     ]),
+
+                Select::make('city_id')
+                    ->relationship('city','name')
+                    ->searchable()
+                    ->preload(),
 
                  Section::make('Content')
                      ->schema([

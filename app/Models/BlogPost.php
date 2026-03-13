@@ -22,4 +22,9 @@ class BlogPost extends Model
         'seo_keywords'
 
     ];
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }
