@@ -195,7 +195,7 @@
 
                                     <div class="col-lg-6">
                                         <div class="row g-4 align-items-center">
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-3 post-image">
                                                 <img src="{{ asset('storage/'.$related->image) }}" alt="{{ $related->title }}">
                                             </div>
                                             <div class="col-sm-9">
