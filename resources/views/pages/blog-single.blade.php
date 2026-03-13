@@ -175,29 +175,7 @@
 
                                 <div class="spacer-single"></div>
 
-                                <div id="comment-form-wrapper">
-                                    <h4>Leave a Comment</h4>
-                                    <div class="comment_form_holder">
-                                        <form id="contact_form" name="form1" method="post" action="#">
 
-                                            <label>Name</label>
-                                            <input type="text" name="name" id="name" class="form-control no-border" >
-
-                                            <label>Email <span class="req">*</span></label>
-                                            <input type="text" name="email" id="email" class="form-control no-border" >
-                                            <div id="error_email" class="error">Please check your email</div>
-
-                                            <label>Message <span class="req">*</span></label>
-                                            <textarea cols="10" rows="10" name="message" id="message" class="form-control no-border"></textarea>
-                                            <div id="error_message" class="error">Please check your message</div>
-                                            <div id="mail_success" class="success">Thank you. Your message has been sent.</div>
-                                            <div id="mail_failed" class="error">Error, email not sent</div>
-
-                                            <p id="btnsubmit">
-                                                <input type="submit" id="send" value="Send" class="btn-line w-100px" ></p>
-                                        </form>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,28 +191,38 @@
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
                             <div class="row g-4">
 
-                                <div class="col-lg-6">
-                                    <div class="relative">
+                                @foreach($relatedPosts as $related)
+
+                                    <div class="col-lg-6">
                                         <div class="row g-4 align-items-center">
                                             <div class="col-sm-3">
-                                                <div class="post-image">
-                                                    <img alt="" src="images/blog/1.webp" class="lazy">
-                                                </div>
+                                                <img src="{{ asset('storage/'.$related->image) }}" alt="{{ $related->title }}">
                                             </div>
-
                                             <div class="col-sm-9">
                                                 <div class="mb-2">
-                                                    <div class="d-inline fs-14 fw-bold me-3"><i class="icofont-tag text-white me-2"></i>Tips &amp; Tricks</div>
-                                                    <div class="d-inline fs-14 fw-600"><i class="icofont-ui-calendar text-white me-2"></i>18 Mar 2024</div>
+                                                    <span>
+                                                        <i class="icofont-tag"></i>
+                                                        {{ $related->category }}
+                                                    </span>
+
+                                                                                        <span>
+                                                        <i class="icofont-ui-calendar"></i>
+                                                        {{ $related->created_at->format('d M Y') }}
+                                                    </span>
+
                                                 </div>
-                                                <h4><a href="/">Mastering Modern Web Design: Trends and Techniques for 2024</a></h4>
+                                                <h4>
+                                                    <a href="{{ route('blog.show', $related->slug) }}">
+                                                        {{ $related->title }}
+                                                    </a>
+                                                </h4>
+
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-
-
+                                @endforeach
+                                
                             </div>
                         </div>
                     </div>

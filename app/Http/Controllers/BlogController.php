@@ -18,10 +18,20 @@ class BlogController extends Controller
 
     public function show($slug)
     {
+
+
         $post = BlogPost::where('slug', $slug)
             ->where('is_published', true)
             ->firstOrFail();
 
-        return view('pages.blog-single', compact('post'));
+
+        $relatedPosts = BlogPost::where('category', $post->category)
+            ->where('id', '!=', $post->id)
+            ->where('is_published', true)
+            ->latest()
+            ->limit(4)
+            ->get();
+
+        return view('pages.blog-single', compact('post', 'relatedPosts'));
     }
 }
