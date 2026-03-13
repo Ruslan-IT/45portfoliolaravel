@@ -29,7 +29,7 @@
     <meta name="twitter:image" content="@yield('seo_image', asset('images/seo-preview.jpg'))">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/png">
 
     <!-- CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap">

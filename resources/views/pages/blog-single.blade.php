@@ -186,7 +186,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-2">
-                            <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Related Post</div>
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Похожие статьи</div>
                         </div>
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
                             <div class="row g-4">
