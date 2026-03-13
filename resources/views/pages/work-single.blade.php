@@ -198,7 +198,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="subject" class="form-control"  value="Форма со страницы детальной  работы {{ $work->testimonial_text }}">
+                        <input type="hidden" name="subject" class="form-control"  value="Форма со страницы детальной  работы {{ $work->title }}">
 
                         <div id='submit' class="mt20">
                             <input type='submit' id='send_message' value='Send Message' class="btn-main btn-line">
