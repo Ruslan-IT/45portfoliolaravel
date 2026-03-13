@@ -41,6 +41,18 @@
 
             <section class="no-top">
                 <div class="container">
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            {{ $errors->first() }}
+                        </div>
+                    @endif
+
                     <h1> Блог о веб-разработке и интернет-маркетинге </h1>
                     <div class="row g-5">
                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">

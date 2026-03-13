@@ -34,6 +34,19 @@
                 </section>
                 <section class="no-top">
                     <div class="container">
+
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                {{ $errors->first() }}
+                            </div>
+                        @endif
+
                         <div class="row">
                             <div class="col-lg-2">
                                 <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Who I Am</div>
@@ -239,33 +252,107 @@
                 <section class="no-top">
                     <div class="container">
                         <div class="row g-4">
+
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".0s">
-                                    <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->hours_of_works }}" data-speed="3000">0</span></h3>
+                                    <h3 class="fs-48 mb-1">
+                                        <span class="timer" data-to="{{ $about->hours_of_works }}" data-speed="3000">0</span>
+                                    </h3>
                                     <div class="fs-15">Часов разработки</div>
                                 </div>
                             </div>
+
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".2s">
-                                    <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->projects_done }}" data-speed="3000">0</span></h3>
+                                    <h3 class="fs-48 mb-1">
+                                        <span class="timer" data-to="{{ $about->projects_done }}" data-speed="3000">0</span>
+                                    </h3>
                                     <div class="fs-15">Реализованных проектов</div>
                                 </div>
                             </div>
+
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".4s">
-                                    <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->satisfied_customers }}" data-speed="3000">0</span></h3>
-                                    <div class="fs-15">Довольных клиентов
+                                    <h3 class="fs-48 mb-1">
+                                        <span class="timer" data-to="{{ $about->satisfied_customers }}" data-speed="3000">0</span>
+                                    </h3>
+                                    <div class="fs-15">Довольных клиентов</div>
+                                </div>
                             </div>
+
                             <div class="col-md-3 col-sm-6 mb-sm-30">
                                 <div class="de_count text-center fs-15 wow fadeInRight" data-wow-delay=".6s">
-                                    <h3 class="fs-48 mb-1"><span class="timer" data-to="{{ $about->awards_winning }}" data-speed="3000">0</span></h3>
+                                    <h3 class="fs-48 mb-1">
+                                        <span class="timer" data-to="{{ $about->awards_winning }}" data-speed="3000">0</span>
+                                    </h3>
                                     <div class="fs-15">Года опыта</div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
+
+                <section class="contact">
+                    <div class="container">
+
+                        <h2>
+                            Давайте создадим ваш сайт
+                        </h2>
+
+                        <h3>
+                            Заполните форму ниже и расскажите о вашем проекте.
+                            Я отвечу вам в ближайшее время и предложу варианты реализации.
+                        </h3>
+
+                        <form  id="contact_form" action="{{ route('contact.send') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="page" value="contact">
+                            <div class="row gx-4">
+                                <div class="col-lg-6 col-md-6 mb10">
+                                    <div class="field-set">
+                                        <span class="d-label fw-bold">Name</span>
+                                        <input type="text" name="name" id="name" class="form-control no-border" placeholder="Your Name" required>
+                                    </div>
+
+                                    <div class="field-set">
+                                        <span class="d-label fw-bold">Phone</span>
+                                        <input type="text" name="phone" id="phone" class="form-control no-border" placeholder="Your Phone" required>
+                                    </div>
+
+                                    <div class="field-set">
+                                        <span class="d-label fw-bold">Email</span>
+                                        <input type="text" name="email" id="email" class="form-control no-border" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-set mb20">
+                                        <span class="d-label fw-bold">Message</span>
+                                        <textarea name="message" id="message" class="form-control no-border" placeholder="Your Message" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="subject" class="form-control"  value="Форма со страницы обо мне">
+
+                            <div id='submit' class="mt20">
+                                <input type='submit' id='send_message' value='Send Message' class="btn-main btn-line">
+                            </div>
+
+                            <div id="success_message" class='success'>
+                                Спасибо! Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.
+                            </div>
+                            <div id="error_message" class='error'>
+                                Sorry there was an error sending your form.
+                            </div>
+                        </form>
+
+                    </div>
+                </section>
             </div>
+
+
+
 
         <!-- content close -->
 
