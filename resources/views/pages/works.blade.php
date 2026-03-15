@@ -9,7 +9,7 @@
 @section('content')
 
     <style>
-        .work -image {
+        .work-image {
             width: 100%;
             height: 260px ;
             object-fit: cover;
@@ -73,7 +73,7 @@
                                         </h2>
 
                                         <img src="{{ asset('storage/'.$work->image) }}"
-                                             class="img-fluid hover-scale-1-2"
+                                             class="img-fluid hover-scale-1-2 work-image
                                              alt="{{ $work->title }}">
 
                                         <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
