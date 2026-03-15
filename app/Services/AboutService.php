@@ -16,7 +16,7 @@ class AboutService
 
         return [
             'about' => $about,
-            'seo' =>$about->getSeo(),
+            'seo' => $about->getSeo(),
         ];
 
     }

@@ -13,8 +13,6 @@ class About extends Model
 
     use HasSeo;
 
-
-
     protected $fillable = [
         'title',
         'description',
