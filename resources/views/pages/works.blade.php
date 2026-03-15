@@ -68,7 +68,7 @@
 
                                     <a href="{{ route('work.show', $work->slug) }}" class="overflow-hidden d-block relative">
 
-                                        <h2 class="fs-25 abs-centered z-index-1 hover-op-0">
+                                        <h2 class="fs-30 abs-centered z-index-1 hover-op-0">
                                             {{ $work->title }}
                                         </h2>
 
