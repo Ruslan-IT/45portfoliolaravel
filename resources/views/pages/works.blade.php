@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('seo_title', 'Портфолио: примеры разработки сайтов и интернет-магазинов - web-ruslan')
-@section('seo_description', 'Портфолио реализованных проектов: разработка сайтов, веб-сервисов и интернет-магазинов - web-ruslan')
-@section('seo_keywords', 'пример разработки сайта, разработка сайтов проекты, разработка сайта компании, разработка интернет магазина примеры, создание сайтов примеры работ - web-ruslan')
+@section('seo_title', $worksSeo->seo_title)
+@section('seo_description', $worksSeo->seo_title)
+@section('seo_keywords', $worksSeo->seo_title)
 
 @section('content')
 
@@ -44,7 +44,7 @@
                         </div>
                     @endif
 
-                    <h1 class="">Мои работы — примеры разработанных сайтов</h1>
+                    <h1 class="">{{ $worksSeo->h1  }}</h1>
                     <div class="row g-4 wow fadeInUp" data-wow-delay=".3s">
 
                         @foreach($works as $work)

@@ -28,7 +28,7 @@
                 <section class="no-top">
 
                     <div class="text-fit-wrapper">
-                        <h2 class="text-fit wow">Обо мне</h2>
+                        <h2 class="text-fit wow">Обо мне </h2>
                         @include('partials/menu')
                     </div>
                 </section>

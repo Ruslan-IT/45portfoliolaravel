@@ -20,7 +20,6 @@ class AboutController extends Controller
     {
 
         $about = $this->service->getAboutPage();
-
         return view('pages.about', $about);
     }
 

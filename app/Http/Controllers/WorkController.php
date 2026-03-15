@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Work;
+use App\Models\WorkPage;
 use Illuminate\Http\Request;
 
 class WorkController extends Controller
@@ -11,8 +12,9 @@ class WorkController extends Controller
     public function index()
     {
         $works = Work::orderBy('created_at', 'desc')->get();
+        $worksSeo = WorkPage::firstOrFail();
 
-        return view('pages.works', compact('works'));
+        return view('pages.works', compact('works', 'worksSeo'));
     }
 
 

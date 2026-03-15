@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 
-@section('seo_title', 'Блог о разработке сайтов, интернет-магазинов и SEO - web-ruslan')
-@section('seo_description', 'Полезные статьи о разработке сайтов, интернет-магазинов, SEO-продвижении и создании сайтов для бизнеса - web-ruslan')
-@section('seo_keywords', 'разработка сайтов статьи, блог разработка сайтов, этапы разработки сайта, основы разработки сайта, разработка интернет сайтов - web-ruslan ')
-
-
+@section('seo_title', $blogSeo->seo_title)
+@section('seo_description', $blogSeo->seo_title)
+@section('seo_keywords', $blogSeo->seo_title)
 
 @section('content')
 
@@ -53,7 +51,7 @@
                         </div>
                     @endif
 
-                    <h1> Блог о веб-разработке и интернет-маркетинге </h1>
+                    <h1> {{ $blogSeo->h1 }} </h1>
                     <div class="row g-5">
                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                             <div class="row g-4">
