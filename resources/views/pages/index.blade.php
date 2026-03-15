@@ -76,7 +76,7 @@
 
 
                                 <div class="col-lg-6">
-                                    <img src="{{ asset('storage/' . $item->image) }}" class="w-100 wow fadeInUp" data-wow-delay=".6s" alt="">
+                                    <img src="{{ asset('storage/' . $item->image) }}" class="w-100 wow fadeInUp" data-wow-delay=".6s" alt="" loading = "lazy">
                                 </div>
 
                             @endforeach
@@ -166,7 +166,7 @@
 
 
                                 @if($what_l_do->image)
-                                    <img src="{{ asset('storage/' . $what_l_do->image) }}" class="jarallax-img"  alt="">
+                                    <img src="{{ asset('storage/' . $what_l_do->image) }}" class="jarallax-img"  alt="" loading = "lazy">
                                 @endif
 
                                 <h3 class="abs-centered m-0">{{ $what_l_do->title  }}</h3>
@@ -272,6 +272,7 @@
 
                                         <img src="{{ asset('storage/'.$work->image) }}"
                                              class="img-fluid hover-scale-1-2"
+                                             loading = "lazy"
                                              alt="{{ $work->title }}">
 
                                         <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
@@ -334,6 +335,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="post-image">
                                                         <img src="{{ asset('storage/'.$post->image) }}"
+                                                             loading = "lazy"
                                                              alt="{{ $post->title }}"
                                                              class="lazy">
                                                     </div>
