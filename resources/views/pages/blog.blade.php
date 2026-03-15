@@ -62,7 +62,10 @@
                                         <div class="row g-4 align-items-center">
                                             <div class="col-sm-3">
                                                 <div class="post-image">
-                                                    <img alt="" src="{{ asset('storage/'.$post->image) }}" class="lazy">
+                                                    <img alt=""
+                                                         src="{{ asset('storage/'.$post->image) }}"
+                                                         loading="lazy"
+                                                         class="lazy">
                                                 </div>
                                             </div>
 

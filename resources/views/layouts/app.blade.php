@@ -59,8 +59,8 @@
     @yield('content')
 
 
-<script src="/assets/js/plugins.js"></script>
-<script src="/assets/js/designesia.js"></script>
-<script src="/assets/js/custom-marquee.js"></script>
+<script src="/assets/js/plugins.js" defer></script>
+<script src="/assets/js/designesia.js" defer></script>
+<script src="/assets/js/custom-marquee.js" defer></script>
 </body>
 </html>

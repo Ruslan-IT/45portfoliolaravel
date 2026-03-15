@@ -74,7 +74,9 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="">
+                            <img src="{{ asset('storage/'.$post->image) }}"
+                                 loading="lazy"
+                                 class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -196,7 +198,10 @@
                                     <div class="col-lg-6">
                                         <div class="row g-4 align-items-center">
                                             <div class="col-sm-3 post-image">
-                                                <img src="{{ asset('storage/'.$related->image) }}" alt="{{ $related->title }}">
+                                                <img
+                                                    src="{{ asset('storage/'.$related->image) }}"
+                                                    loading="lazy"
+                                                    alt="{{ $related->title }}">
                                             </div>
                                             <div class="col-sm-9">
                                                 <div class="mb-2">

@@ -119,7 +119,9 @@
 
                                                     <a href="{{ asset('storage/'.$image['image']) }}" class="image-popup overflow-hidden d-block relative">
 
-                                                        <img src="{{ asset('storage/'.$image['image']) }}" class="img-fluid hover-scale-1-2" alt="">
+                                                        <img src="{{ asset('storage/'.$image['image']) }}"
+                                                             loading="lazy"
+                                                             class="img-fluid hover-scale-1-2" alt="">
 
                                                         <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
                                                             <div class="d-tag-s2">{{ $image['tag'] }}</div>

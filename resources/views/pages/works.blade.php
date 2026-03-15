@@ -73,6 +73,7 @@
                                         </h2>
 
                                         <img src="{{ asset('storage/'.$work->image) }}"
+                                             loading="lazy"
                                              class="img-fluid hover-scale-1-2 work-image
                                              alt="{{ $work->title }}">
 
