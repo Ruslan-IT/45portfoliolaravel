@@ -4,8 +4,17 @@
 @section('seo_description', $worksSeo->seo_title)
 @section('seo_keywords', $worksSeo->seo_title)
 
+
+
 @section('content')
 
+    <style>
+        .work -image {
+            width: 100%;
+            height: 260px ;
+            object-fit: cover;
+        }
+    </style>
 
     <div id="wrapper">
         <div class="float-text show-on-scroll">

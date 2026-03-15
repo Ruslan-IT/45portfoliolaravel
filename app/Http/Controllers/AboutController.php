@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\BlogPost;
 use App\Services\AboutService;
-use Illuminate\Http\Request;
+
 
 class AboutController extends Controller
 {

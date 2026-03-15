@@ -13,7 +13,6 @@ class AboutService
 
         $about = About::firstOrFail();
 
-
         return [
             'about' => $about,
             'seo' => $about->getSeo(),

@@ -15,7 +15,6 @@ class HomeController
 
     public function index()
     {
-        $title = 'Catalog';
 
         $siteSettings = SiteSetting::first();
 
@@ -35,7 +34,6 @@ class HomeController
             ->get();
 
         return view('pages.index', compact(
-            'title',
             'siteSettings',
             'homePage',
             'sections',

@@ -5,8 +5,8 @@ namespace App\Traits;
 
 trait HasSeo{
 
-
-    public function getSeo(){
+    public function getSeo()
+    {
 
         return [
             'title' => $this->seo_title,
@@ -16,6 +16,5 @@ trait HasSeo{
         ];
 
     }
-
 
 }
