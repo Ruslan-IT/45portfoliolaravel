@@ -32,11 +32,19 @@
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/png">
 
     <!-- CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap">
-    <link href="/assets/css/plugins.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="/assets/css/coloring.css" rel="stylesheet">
-    <link id="colors" href="/assets/css/colors/scheme-01.css" rel="stylesheet">
+    <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/coloring.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/colors/scheme-01.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/plugins.css" rel="stylesheet">
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link href="/assets/css/coloring.css" rel="stylesheet">
+        <link href="/assets/css/colors/scheme-01.css" rel="stylesheet">
+    </noscript>
 
 </head>
 <body class="dark-scheme">
