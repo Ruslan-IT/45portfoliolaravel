@@ -65,7 +65,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="row g-4 gx-5 wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <h4>Обзор</h4>
                                             <p class="no-bottom">
                                                 {{ $work->overview }}
