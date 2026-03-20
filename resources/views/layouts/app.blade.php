@@ -32,11 +32,17 @@
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/png">
 
     <!-- CSS -->
-    <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   {{-- <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/coloring.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/assets/css/colors/scheme-01.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/colors/scheme-01.css" as="style" onload="this.onload=null;this.rel='stylesheet'">--}}
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/plugins.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/coloring.css">
+    <link rel="stylesheet" href="/assets/css/colors/scheme-01.css">
 
   {{--  <noscript>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
