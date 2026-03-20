@@ -2,27 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Work;
-use App\Models\WorkPage;
-use Illuminate\Http\Request;
+use App\Services\WorkService;
+
 
 class WorkController extends Controller
 {
+    private WorkService $workService;
+
+    public function __construct(WorkService $workService)
+    {
+        $this->workService = $workService;
+    }
+
 
     public function index()
     {
-        $works = Work::orderBy('created_at', 'desc')->get();
-        $worksSeo = WorkPage::firstOrFail();
-
-        return view('pages.works', compact('works', 'worksSeo'));
+        return view('pages.works', $this->workService->getWorkPageData());
     }
 
 
     public function show($slug)
     {
-
-        $work = Work::where('slug', $slug)->firstOrFail();
-
-        return view('pages.work-single', compact('work'));
+        return view('pages.work-single', $this->workService->getWorkPage($slug));
     }
 }

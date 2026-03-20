@@ -5,6 +5,14 @@
 @section('seo_keywords', $work->seo_keywords)
 
 @section('content')
+    <style>
+        .ul-style-2 li:before {
+            display: none;
+        }
+        .ul-style-2 li {
+            padding-left: 0;
+        }
+    </style>
 
 
     <div id="wrapper">
@@ -70,11 +78,23 @@
 
                                                 @foreach($work->objectives as $item)
 
-                                                    <li>{{ $item['title']  }}</li>
+                                                    <li>
+                                                        <img src="{{ asset('images/icon.png') }}" alt="иконка" style="width:16px; height:16px; margin-right:5px;">
+                                                        {{ $item['title']  }}
+                                                    </li>
 
                                                 @endforeach
 
                                             </ul>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            @if(!empty($work->testimonial_text))
+                                                <h4>Результат</h4>
+                                                <p class="no-bottom">
+                                                    {{ $work->testimonial_text }}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
 

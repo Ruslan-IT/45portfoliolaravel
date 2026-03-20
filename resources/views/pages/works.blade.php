@@ -34,6 +34,7 @@
             <section class="no-top">
 
                 <div class="text-fit-wrapper">
+
                     <h2 class="text-fit wow">Кейсы</h2>
                     @include('partials/menu')
                 </div>
@@ -53,10 +54,24 @@
                         </div>
                     @endif
 
+
+
+
                     <h1 class="">{{ $worksSeo->h1  }}</h1>
+
+
+
                     <div class="row g-4 wow fadeInUp" data-wow-delay=".3s">
 
-                        @foreach($works as $work)
+                       {{-- <x-layouts.app>
+                            @livewire('pages.post.create')
+                        </x-layouts.app>--}}
+
+                       {{-- <x-layouts.app>
+                            @livewire('pages.work.index')
+                        </x-layouts.app>--}}
+
+                            @foreach($works as $work)
 
                             @php
                             //dd($work)
@@ -68,9 +83,12 @@
 
                                     <a href="{{ route('work.show', $work->slug) }}" class="overflow-hidden d-block relative">
 
+
                                         <h2 class="fs-30 abs-centered z-index-1 hover-op-0">
                                             {{ $work->title }}
                                         </h2>
+
+
 
                                         <img src="{{ asset('storage/'.$work->image) }}"
                                              loading="lazy"

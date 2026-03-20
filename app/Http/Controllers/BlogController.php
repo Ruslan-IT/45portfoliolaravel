@@ -22,6 +22,7 @@ class BlogController extends Controller
     public function show($slug)
     {
 
+
         return view('pages.blog-single', $this->service->getPostData($slug));
     }
 }
