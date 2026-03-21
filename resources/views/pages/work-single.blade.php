@@ -172,9 +172,9 @@
                             <div class="subtitle wow fadeInUp" data-wow-delay=".3s">Client Says</div>
                         </div>
                         <div class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">
-                            <h2 class="lh-1"> {{ $work->testimonial_text }}</h2>
 
-                            <p> {{ $work->testimonial_author }}</p>
+
+                            <p> {{--{{ $work->testimonial_author }}--}}</p>
                         </div>
                     </div>
                 </div>
