@@ -29,40 +29,38 @@ class BlogPostForm
                             ->required()
                             ->unique(ignoreRecord: true),
 
-                        TextInput::make('category'),
-
                         FileUpload::make('image')
                             ->image()
                             ->disk('public')
                             ->directory('blog'),
 
-                        DatePicker::make('published_at'),
-
                         Toggle::make('is_published')
                             ->default(true),
 
-                    ])->columns(2),
+                    ])
+                    ->columns(1)
+                    ->columnSpanFull(),
 
+                TextInput::make('category'),
 
+                DatePicker::make('published_at'),
 
                 Section::make('SEO')
                     ->schema([
 
                         TextInput::make('seo_title'),
 
-                        Textarea::make('seo_description'),
+                        Textarea::make('seo_description')->rows(3),
 
                         TextInput::make('seo_keywords'),
 
-                    ]),
+                    ])->columnSpanFull(),
 
-                Select::make('city_id')
-                    ->relationship('city','name')
-                    ->searchable()
-                    ->preload(),
+
 
                  Section::make('Content')
                      ->schema([
+
 
                          RichEditor::make('content')
                              ->extraAttributes([
@@ -72,16 +70,15 @@ class BlogPostForm
 
                          Textarea::make('excerpt')
                              ->rows(5),
-
-
-
-
                      ])
                      ->columns(1)
-                     ->columnSpanFull()
+                     ->columnSpanFull(),
 
 
-
+                 Select::make('city_id')
+                     ->relationship('city','name')
+                     ->searchable()
+                     ->preload()
             ]);
     }
 }
