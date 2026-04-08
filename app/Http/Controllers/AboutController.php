@@ -7,17 +7,11 @@ use App\Services\AboutService;
 
 class AboutController extends Controller
 {
-    private AboutService  $service;
 
-    public function __construct(AboutService $service)
-    {
-        $this->service = $service;
-    }
-
-    public function index()
+    public function index(AboutService $service)
     {
 
-        $about = $this->service->getAboutPage();
+        $about = $service->getAboutPage();
         return view('pages.about', $about);
     }
 

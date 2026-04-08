@@ -46,4 +46,8 @@ class BlogPostResource extends Resource
             'edit' => EditBlogPost::route('/{record}/edit'),
         ];
     }
+
+
+
+
 }

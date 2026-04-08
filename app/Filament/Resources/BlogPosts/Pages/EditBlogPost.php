@@ -16,4 +16,5 @@ class EditBlogPost extends EditRecord
             DeleteAction::make(),
         ];
     }
+
 }

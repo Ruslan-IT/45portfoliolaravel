@@ -12,7 +12,7 @@ class BlogService
     {
         $posts = BlogPost::where('is_published', true)
             ->latest()
-            ->paginate(6);
+            ->paginate(20);
 
         $blogSeo = BlogPage::firstOrFail();
 
