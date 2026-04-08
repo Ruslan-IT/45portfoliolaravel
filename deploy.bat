@@ -10,4 +10,4 @@ git commit -m "Разделение логики работы приложени
 git push origin master
 
 echo ✅ Деплой завершен
-pause
+exit
