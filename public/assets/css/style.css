@@ -1859,7 +1859,7 @@ header.header-light .h-phone span{
   width: 100%;
   margin-bottom: 0px;
 
-    height: 80px;
+   /* height: 80px;*/
     object-fit: cover;
     border-radius: 6px;
 }
